@@ -6,6 +6,7 @@ import { useCart } from '../../contexts/CartContext';
 import { Plus, Search, Store } from 'lucide-react';
 import VoiceOrderAssistant from '../../components/VoiceOrderAssistant';
 import { Link } from 'react-router-dom';
+import FeedbackForm from '../../components/FeedbackForm';
 
 const VendorDashboard: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -15,6 +16,7 @@ const VendorDashboard: React.FC = () => {
   const [suppliers, setSuppliers] = useState<{ [key: string]: string }>({});
   const [showCartPopup, setShowCartPopup] = useState(false);
   const [cartPopupMessage, setCartPopupMessage] = useState('');
+  const vendorId = 'vendor_123';
 
   const { addToCart } = useCart();
 
@@ -119,6 +121,7 @@ const VendorDashboard: React.FC = () => {
       </div>
     </div>
   </div>
+  
   {/* Action Buttons & Voice Assistant */}
   <div className="flex flex-col sm:flex-row sm:items-start gap-6 mt-6 w-full p-0 m-0">
     <div className="flex flex-col items-end w-full sm:w-auto">
@@ -138,7 +141,7 @@ const VendorDashboard: React.FC = () => {
       />
     </div>
   </div>
-
+  
 
       {Object.keys(groupedProducts).length === 0 ? (
         <div className="text-center py-12">
