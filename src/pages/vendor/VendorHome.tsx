@@ -8,6 +8,7 @@ import { Phone, Mail, MessageSquare } from 'lucide-react';
 const offers = [
   { title: '10% Off on First Order!', description: 'Get 10% off when you place your first order today.' },
   { title: 'Free Delivery', description: 'Enjoy free delivery on orders above ₹500.' },
+  { title: 'Bulk Purchase Bonus', description: 'Get extra discounts on bulk orders above ₹2000!' }, // <-- Added third offer
 ];
 
 const popularProducts = [
